@@ -1,5 +1,5 @@
 import React from 'react';
-//import SearchBar from '@/components/searchbar';
+import SearchBar from '@/components/searchbar';
 
 const Layout = ({ children }) => {
   return (
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
           <div>
             <h1 className="text-2xl font-bold">Recipe Finder</h1>
           </div>
-         
+          <SearchBar />
         </div>
       </header>
       <main className="container mx-auto px-4 py-8">
