@@ -1,19 +1,15 @@
-"use client"
-import React, { useContext } from 'react';
-import { SearchContext } from "../app/contex/searchContex"
-
+"use client";
+import React, { useContext, useState, useEffect } from "react";
+import { SearchContext } from "../app/contex/searchContex";
 const SearchBar = () => {
   const { handleSearch } = useContext(SearchContext);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const debounce = setTimeout(() => {
-      if (query) {
-        handleSearch(query);
-      } else {
-        handleSearch(null);
-      }
+      handleSearch(query);
     }, 500);
+
     return () => clearTimeout(debounce);
   }, [query, handleSearch]);
 

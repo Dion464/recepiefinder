@@ -1,5 +1,5 @@
-import { useFavoritesStore } from '../store/favorites';
-import RecipeList from '../components/RecipeList';
+import { useFavoritesStore } from "../store/favorite";
+import RecipeList from "../components/RecipeList";
 
 export default function FavoritesPage() {
   const favorites = useFavoritesStore((state) => state.favorites);
